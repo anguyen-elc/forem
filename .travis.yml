@@ -1,8 +1,8 @@
 script: "bundle exec rake forem:dummy_app --trace; bundle exec rspec spec"
 env:
-  - DB=sqlite
-  - DB=mysql
-  - DB=postgres
+  - CI=true DB=sqlite
+  - CI=true DB=mysql
+  - CI=true DB=postgres
 rvm:
   - 1.8.7
   - 1.9.3
